@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# History 模式路由：将所有未知路径回退到 index.html，避免刷新子页 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
